@@ -3,7 +3,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="fragment_a">Calculadora de buffer Automatico</string>
     <string name="fragment_b">Fragment B</string>
-    <string name="button">Button222</string>
-    <string name="button2">Button</string>
+    <string name="button">Calculadora de buffer manual</string>
+    <string name="button2">Disoluciones</string>
     <string name="autocompletetextview">¿Que buffer deseas preparar?</string>
+    <string name="button4">Buffer TRIS</string>
+    <string name="button5">Buffer HEPES</string>
+    <string name="button6">Buffer FOSFATO</string>
 </resources>
