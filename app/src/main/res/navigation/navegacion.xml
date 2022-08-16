@@ -23,4 +23,9 @@
             android:id="@+id/action_fragmentB_to_fragmentA"
             app:destination="@id/fragmentA" />
     </fragment>
+    <fragment
+        android:id="@+id/fragment_c"
+        android:name="com.lav7.labapply.Fragment_c"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" />
 </navigation>
