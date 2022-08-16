@@ -22,10 +22,17 @@
         <action
             android:id="@+id/action_fragmentB_to_fragmentA"
             app:destination="@id/fragmentA" />
+        <action
+            android:id="@+id/action_fragmentB_to_fragment_c"
+            app:destination="@id/fragment_c" />
     </fragment>
     <fragment
         android:id="@+id/fragment_c"
         android:name="com.lav7.labapply.Fragment_c"
         android:label="fragment_c"
-        tools:layout="@layout/fragment_c" />
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_fragment_c_to_fragmentB"
+            app:destination="@id/fragmentB" />
+    </fragment>
 </navigation>
