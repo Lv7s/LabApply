@@ -77,5 +77,6 @@ class Fragment_c : Fragment(), View.OnClickListener {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_c, container, false)
+        calcularTris.setOnClickListener { this }
     }
 }
