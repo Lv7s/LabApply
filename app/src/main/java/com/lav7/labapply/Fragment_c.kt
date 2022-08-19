@@ -9,22 +9,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_main. *
 import kotlinx.android.synthetic.main.fragment_c.*
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Fragment_c.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Fragment_c : Fragment(), View.OnClickListener {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
     var VolReq : Float? = null
     var ConcTris : Float? = null
     var ConcNaCl : Float? = null
@@ -39,11 +24,7 @@ class Fragment_c : Fragment(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-            calcularTris.setOnClickListener { this }
-            arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onClick(p0: View?) {
@@ -83,10 +64,11 @@ class Fragment_c : Fragment(), View.OnClickListener {
             VolGlic = editTextTextPersonName4.text.toString().toFloat()
         }
         when(p0?.id){
-            R.id.calcularTris -> {textView.text=ConcTris!!.times(VolReq!!).times(TRIS).toString()}
-            R.id.calcularTris -> {textView2.text=ConcNaCl!!.times(VolReq!!).times(NaCl).toString()}
-            R.id.calcularTris -> {textView3.text=ConcMgCl2!!.times(VolReq!!).times(MgCl2Hexahidro).toString()}
-            R.id.calcularTris -> {textView8.text=VolGlic!!.times(Glicerol).toString()}
+            R.id.calcularTris -> {
+                textView.text=ConcTris!!.times(VolReq!!).times(TRIS).toString()
+                textView2.text=ConcNaCl!!.times(VolReq!!).times(NaCl).toString()
+                textView3.text=ConcMgCl2!!.times(VolReq!!).times(MgCl2Hexahidro).toString()
+                textView8.text=VolGlic!!.times(Glicerol).toString()}
         }
     }
     override fun onCreateView(
@@ -95,25 +77,5 @@ class Fragment_c : Fragment(), View.OnClickListener {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_c, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Fragment_c.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Fragment_c().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
